@@ -88,7 +88,8 @@ run_whatweb_scan() {
 # Function to run dirsearch
 run_dirsearch_scan() {
     echo "Running directory enumeration using dirsearch..."
-    dirsearch -u "$target" --proxy http://127.0.0.1:8080    
+    dirsearch -u "$target"
+    #dirsearch -u "$target" --proxy http://127.0.0.1:8080    
     echo "Directory enumeration complete."
 }
 
