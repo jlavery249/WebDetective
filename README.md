@@ -41,8 +41,6 @@ Options:
 - `-l <ip_list_file>`: Specify a file containing a list of IPs or domains
 - `-w <custom_wordlist>`: Specify a custom wordlist file
 
-> **Note:** Any combination of flags can be used together or excluded by simply not using the switch.
-
 Examples:
 - Run all scans on a single target:
   ```bash
