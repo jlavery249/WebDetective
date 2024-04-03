@@ -58,6 +58,7 @@ Examples:
 - Adding Burp Suite proxy functionality
 - Future conversion to Python3 for improved performance and compatibility
 - Additional user-friendly features such as package checks, interactive mode, etc.
+- Allow multiple combination of switches to be used
 
 # Current Bugs 
 - Issue with the lolcat command not found in some environments, needs to be installed manually and path needs to be manually hardcoded into the script.
