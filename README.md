@@ -2,6 +2,7 @@
 
 WebDetective is a Bash script designed to perform various web vulnerability scans on specified IP addresses or domains. It automates the process of running scans such as Nmap SYN scan, WhatWeb, Nikto, dirsearch, Gobuster, FFuf, and Nmap aggressive scan, providing a comprehensive assessment of potential vulnerabilities in web applications.
 
+![[demo.mp4]]
 ## Features
 
 - Automated web vulnerability scans
