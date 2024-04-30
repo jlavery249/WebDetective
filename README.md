@@ -34,16 +34,17 @@ To run WebDetective, use the following command format:
 sudo ./webdetective.sh [options] -i <ip_address/domain> -p <proxy_ip:proxyport>
 ```
 
-Options:
-  -A: Run all scans in order (Nmap SYN, WhatWeb, Nikto, dirsearch, Gobuster, FFuf, Nmap aggressive)
-  -n: Run Nikto scan
-  -W: Run WhatWeb scan
-  -d: Run dirsearch scan
-  -g: Run Gobuster scan
-  -f: Run FFuf scan
-  -N: Run both nmap scans
-  -p <proxy_ip:proxyport>: Specifies a proxy with the selected options
-  -i <ip_address/domain>: Specifies the target IP address or domain
+## Options:
+
+  - `-A`: Run all scans in order (Nmap SYN, WhatWeb, Nikto, dirsearch, Gobuster, FFuf, Nmap aggressive)
+  - `-n`: Run Nikto scan
+  - `-W`: Run WhatWeb scan
+  - `-d`: Run dirsearch scan
+  - `-g`: Run Gobuster scan
+  - `-f`: Run FFuf scan
+  - `-N`: Run both nmap scans
+  - `-p`: Specifies a proxy with the selected options
+  - `-i`: Specifies the target IP address or domain
 
 Examples:
 - Run all scans on a domain:
