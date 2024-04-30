@@ -40,6 +40,7 @@ Options:
 - `-g`: Run Gobuster scan
 - `-f`: Run FFuf scan
 - `-N`: Run both nmap scans
+- `-p`: Use proxy with scans (optional)
   
 Examples:
 - Run all scans on a single target:
