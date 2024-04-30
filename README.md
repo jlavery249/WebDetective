@@ -43,6 +43,7 @@ Options:
 - `-N`: Run both nmap scans
 - `-l`: Use a list of IPs or domains
 - `-w`: Use custom wordlist
+- `-i`: Specifies the target IP address or domain
   
 Examples:
 - Run all scans on a single target:
