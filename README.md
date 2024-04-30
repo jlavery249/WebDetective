@@ -8,8 +8,9 @@ https://github.com/jlavery249/WebDetective/assets/121765789/d7a38e4d-623d-485f-b
 
 - Automated web vulnerability scans
 - Customizable with different scan options
-- Can route all tools through proxy (tested with Burpsuite Pro)
+- Supports custom wordlists for directory and file enumeration
 - Suitable for security testing and vulnerability assessment
+- Can route all tools through proxy (tested with Burpsuite Pro)
 
 ## Prerequisites
 
@@ -40,7 +41,8 @@ Options:
 - `-g`: Run Gobuster scan
 - `-f`: Run FFuf scan
 - `-N`: Run both nmap scans
-- `-p`: Use proxy with scans (optional)
+- `-l`: Use a list of IPs or domains
+- `-w`: Use custom wordlist
   
 Examples:
 - Run all scans on a single target:
