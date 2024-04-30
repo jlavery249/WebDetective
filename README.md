@@ -40,9 +40,7 @@ Options:
 - `-g`: Run Gobuster scan
 - `-f`: Run FFuf scan
 - `-N`: Run both nmap scans
-- `-l <ip_list_file>`: Specify a file containing a list of IPs or domains
-- `-w <custom_wordlist>`: Specify a custom wordlist file
-
+  
 Examples:
 - Run all scans on a single target:
   ```bash
