@@ -10,6 +10,7 @@ https://github.com/jlavery249/WebDetective/assets/121765789/d7a38e4d-623d-485f-b
 - Customizable with different scan options
 - Supports custom wordlists for directory and file enumeration
 - Suitable for security testing and vulnerability assessment
+- Can route all tools through proxy (tested with Burpsuite Pro)
 
 ## Prerequisites
 
@@ -23,52 +24,62 @@ Before using WebDetective, ensure you have the following packages installed:
 - `ffuf`: For FFuf scans (install using `sudo apt install ffuf`)
 - `figlet`: For displaying the banner (install using `sudo apt install figlet`)
 - `lolcat`: For colorful output (install using `sudo apt install lolcat`)
+- `Proxy`: For routing traffic through proxy (optional)
 
 ## Usage
 
 To run WebDetective, use the following command format:
 
 ```bash
-sudo ./webdetective.sh [options] -i <ip_address/domain>
+sudo ./webdetective.sh [options] -i <ip_address/domain> -p <proxy_ip:proxyport>
 ```
 
 Options:
-- `-A`: Run all scans in order (Nmap SYN, WhatWeb, Nikto, dirsearch, Gobuster, FFuf, Nmap aggressive)
-- `-n`: Run Nikto scan
-- `-W`: Run WhatWeb scan
-- `-d`: Run dirsearch scan
-- `-g`: Run Gobuster scan
-- `-f`: Run FFuf scan
-- `-N`: Run both nmap scans
-- `-l <ip_list_file>`: Specify a file containing a list of IPs or domains
-- `-w <custom_wordlist>`: Specify a custom wordlist file
+  -A: Run all scans in order (Nmap SYN, WhatWeb, Nikto, dirsearch, Gobuster, FFuf, Nmap aggressive)
+  -n: Run Nikto scan
+  -W: Run WhatWeb scan
+  -d: Run dirsearch scan
+  -g: Run Gobuster scan
+  -f: Run FFuf scan
+  -N: Run both nmap scans
+  -p <proxy_ip:proxyport>: Specifies a proxy with the selected options
+  -i <ip_address/domain>: Specifies the target IP address or domain
 
 Examples:
-- Run all scans on a single target:
+- Run all scans on a domain:
   ```bash
-  sudo ./webdetective.sh -A -i 192.168.1.100
+  sudo ./webdetective.sh -A -i example.com
   ```
-- Run Nikto scan on a domain:
+- Run Nikto scan on a single target:
   ```bash
-  sudo ./webdetective.sh -n -i example.com
+  sudo ./webdetective.sh -n -i 192.168.1.100
   ```
-- Run scans on multiple targets from a list file:
+- Run scans on multiple options together:
   ```bash
-  sudo ./webdetective.sh -A -l /path/to/ip_list.txt
+  sudo ./WebDetective.sh -WNgfn -i example.com
   ```
+- Run all scans through proxy
+  ```bash
+  sudo ./WebDetective.sh -A -i example.com -p 127.0.0.1:8080
+  ```
+- Run single option through proxy
+  ```bash
+  sudo ./WebDetective.sh -f -i 192.168.1.100 -p 127.0.0.1:8080
+  ```
+  
 # Future Improvements
-- Adding Burp Suite proxy functionality
 - Future conversion to Python3 for improved performance and compatibility
 - Additional user-friendly features such as package checks, interactive mode, etc.
-- Allow multiple combination of switches to be used
+- Implement file with a list of domains or IPs to allow multiple targets
 
 # Current Bugs 
-- Issue with the lolcat command not found in some environments, needs to be installed manually and path needs to be manually hardcoded into the script.
+- Issue with the lolcat command not found in some environments, needs to be installed manually and path needs to be manually hardcoded into the script
+- It is recommended to use the address `127.0.0.1` with the proxy feature (`-p`), things may break if you use `localhost:8080` as an example
 
 
 ## Disclaimer
 
-This is an alpha version of the script, use it at your own risk. Things may be broken and features will improve as this project progresses. I am not responsible for any damage or misuse. Ensure that this script is used against an environment that has provided permission for security testing or in an isolated/test environment.
+This is the beta version of the script, although it may be more stable than the previous release, still use it at your own risk. Things may be broken and features will improve as this project progresses. I am not responsible for any damage or misuse. Ensure that this script is used against an environment that has provided permission for security testing or in an isolated/test environment.
 
 ## License
 
