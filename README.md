@@ -8,7 +8,7 @@ https://github.com/jlavery249/WebDetective/assets/121765789/d7a38e4d-623d-485f-b
 
 - Automated web vulnerability scans
 - Customizable with different scan options
-- Supports custom wordlists for directory and file enumeration
+- Can route all tools through proxy (tested with Burpsuite Pro)
 - Suitable for security testing and vulnerability assessment
 
 ## Prerequisites
