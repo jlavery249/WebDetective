@@ -44,9 +44,10 @@ sudo ./webdetective.sh [options] -i <ip_address/domain> -p <proxy_ip:proxyport>
   - `-f`: Run FFuf scan
   - `-N`: Run both nmap scans
   - `-p`: Specifies a proxy with the selected options
-  - `-i`: Specifies the target IP address or domain
+  - `-i`: Specifies the target IP address or doma
+  
 
-Examples:
+## Examples:
 - Run all scans on a domain:
   ```bash
   sudo ./webdetective.sh -A -i example.com
